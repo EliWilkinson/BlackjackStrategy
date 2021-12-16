@@ -29,14 +29,20 @@ def hit_or_stand(deck,hand):
     global playing  # to control an upcoming while loop
     
     while True:
-        x = input("Would you like to Hit or Stand? Enter 'h' or 's' ")
+        x = input("Would you like to Hit, Stand, Double Down, or Split? Enter 'h' ,  's' , 'dd' , 'sp' ")
         
         if x[0].lower() == 'h':
             hit(deck,hand)  # hit() function defined above
 
-        elif x[0].lower() == 's':
+        elif x[0].lower() == ' ':
             print("Player stands. Dealer is playing.")
             playing = False
+
+        elif x[0].lower() == 'dd':
+            hit(deck,hand)  # hit() function defined above
+            playing = False
+            
+        #have not written for splitting yet
 
         else:
             print("Sorry, please try again.")
