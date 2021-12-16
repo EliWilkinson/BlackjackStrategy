@@ -26,8 +26,7 @@ class Card:
 #create Deck Class
 
 class Deck:
-    
-		def __init__(self):
+    def __init__(self):
         self.deck = []  # start with an empty list
         for suit in suits:
             for rank in ranks:
@@ -47,7 +46,7 @@ class Deck:
         return single_card
 
 
-
+#upgraded version in second repository
 class Hand:
     def __init__(self):
         self.cards = []  # start with an empty list as we did in the Deck class
